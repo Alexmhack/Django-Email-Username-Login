@@ -52,4 +52,7 @@ class UserManager(BaseUserManager):
 
 
 class User(AbstractUser):
-	pass
+	email = models.EmailField(unique=True)
+	active = models.BooleanField(default=False)
+	admin = models.BooleanField(default=False)
+	staff = models.BooleanField(default=False)
