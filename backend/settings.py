@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL = 'accounts.User'
 
 # Application definition
 
@@ -43,6 +44,9 @@ INSTALLED_APPS = [
     # django packages
     'allauth',
     'allauth.account',
+
+    # django apps
+    'accounts',
 ]
 
 MIDDLEWARE = [
