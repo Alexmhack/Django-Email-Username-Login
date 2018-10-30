@@ -9,10 +9,11 @@ def signup_view(request):
 	if request.method == "POST":
 		form = SignUpForm(request.POST)
 		if form.is_valid():
-			form.save()
+			user = form.save()
 			username = form.cleaned_data.get('username')
+			email = form.cleaned_data.get('email')
 			password = form.cleaned_data.get('password1')
-			user = authenticate(username=username, password=password)
+			user = authenticate(username=username, email=email, password=password)
 			login(request, user)
 			return redirect('accounts:dashboard')
 		else:
