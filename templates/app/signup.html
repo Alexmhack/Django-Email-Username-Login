@@ -27,18 +27,12 @@
 	<div class="col-md-4">
 		
 		<div class="list-group mt-5">
-		    <a href="{% url 'users:home' %}" class="list-group-item list-group-item-action waves-effect">Home</a>
-			{% if profile %}
-		    <a href="{% url 'profiles:profile-signup' %}" class="list-group-item bg-secondary text-white waves-effect">
-		    		Profile Sign up
-		    	{% else %}
-		    	<a href="{% url 'users:sign-up' %}" class="list-group-item bg-secondary text-white waves-effect">
-		    		Sign up
-		    {% endif %}		    	
+		    <a href="{% url 'accounts:home' %}" class="list-group-item list-group-item-action waves-effect">Home</a>
+		    <a href="{% url 'accounts:register' %}" class="list-group-item bg-secondary text-white waves-effect">
+		    	Register
 		    </a>
 		    <a href="{% url 'login' %}" class="list-group-item list-group-item-action waves-effect">Login</a>
-		    <a href="{% url 'users:dashboard' %}" class="list-group-item list-group-item-action waves-effect">Dashboard</a>
-		    <a href="{% url 'users:dashboard' %}" class="list-group-item list-group-item-action waves-effect">Profile</a>
+		    <a href="{% url 'accounts:dashboard' %}" class="list-group-item list-group-item-action waves-effect">Dashboard</a>
 		</div>
 
 	</div>

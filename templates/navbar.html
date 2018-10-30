@@ -3,7 +3,7 @@
 
 <div class="container">
     <!-- Navbar brand -->
-    <a class="navbar-brand" href="{% url 'users:home' %}">Django</a>
+    <a class="navbar-brand" href="{% url 'accounts:home' %}">Django</a>
 
     <!-- Collapse button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
@@ -17,24 +17,16 @@
         <!-- Links -->
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="{% url 'users:home' %}">Home
+                <a class="nav-link" href="{% url 'accounts:home' %}">Home
                     <span class="sr-only">(current)</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'users:dashboard' %}">Dashboard</a>
+                <a class="nav-link" href="{% url 'accounts:dashboard' %}">Dashboard</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{% url 'users:sign-up' %}">Sign up</a>
+                <a class="nav-link" href="{% url 'accounts:register' %}">Register</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'profiles:profile-signup' %}">Profile SignUp</a>
-            </li>
-            {% if request.user.is_authenticated %}
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'profiles:profile-edit' user.profile.id %}">Profile</a>
-            </li>
-            {% endif %}
 
         </ul>
         <!-- Links -->
